@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Unity WebGL Player | 3d runner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3d runner</title>
   <style>
     body,
     html {
@@ -76,6 +77,7 @@ function resizeCanvas() {
         companyName: "3D_RUNNER",
         productName: "3d runner",
         productVersion: "0.1.0",
+        devicePixelRatio: 1
       };
 
         
@@ -85,11 +87,8 @@ function resizeCanvas() {
           createUnityInstance(canvas, config, (progress) => {
           }).then((unityInstance) => {
 
-            // unityInstance.SetFullscreen(1);
             canvas.requestFullscreen(1);
             if(unityInstance){
-              // unityInstance.SendMessage("GameManager", "StartGame", token);
-              //console.log("Unity instance created with token:",token);
             }
             
           }).catch((message) => {
